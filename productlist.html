@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Products</title>
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <div class="navHead">
+      <div class="container">
+        <div class="call">
+          <div class="icon">
+            <img src="./res/img/icons/phone-call (3) 1.svg" alt="" />
+          </div>
+          <div class="number"><a href="tel:+">+748 383 23 14</a></div>
+        </div>
+        <div class="terms">
+          <div class="termsUse"><a href="#">Terms of Use</a></div>
+          <div class="faq"><a href="#">FAQ</a></div>
+          <div class="customerService"><a href="#">Customer service</a></div>
+        </div>
+      </div>
+    </div>
+    <!-- header -->
+    <header>
+      <div class="container">
+        <div class="upper">
+          <div class="logo"><a href="./index.html">Snobella</a></div>
+          <div class="search">
+            <input type="text" placeholder="Search all product" />
+            <div class="icon">
+              <img src="./res/img/icons/search 1.svg" alt="" />
+            </div>
+          </div>
+          <ul class="navIcons">
+            <li>
+              <div class="icon">
+                <img src="./res/img/icons/avatar 1.svg" alt="" />
+              </div>
+              <a href="./login.html" class="signIn block rounded py-2 pl-3 pr-4 text-grey-700 hover:bg-red-100 md:p-0 md:hover:bg-transparent md:hover:text-red-700">Sign In</a>
+            </li>
+            <li>
+              <div class="icon">
+                <img src="./res/img/icons/heart (2).svg" alt="" />
+              </div>
+              <a href="./favorite.html" class="wishlist block rounded py-2 pl-3 pr-4 text-grey-700 hover:bg-red-100 md:p-0 md:hover:bg-transparent md:hover:text-red-700"> Wishlist</a>
+            </li>
+            <li>
+              <div class="icon">
+                <img src="./res/img/icons/bag.svg" alt="" />
+              </div>
+              <a href="./shoppingCart.html" class="basket block rounded py-2 pl-3 pr-4 text-grey-700 hover:bg-red-100 md:p-0 md:hover:bg-transparent md:hover:text-red-700">Basket</a>
+            </li>
+            <li>
+              <div class="icon">
+              </div>
+              <a href="#"
+                class="logout block rounded py-2 pl-3 pr-4 text-grey-700 hover:bg-red-100 md:p-0 md:hover:bg-transparent md:hover:text-red-700"><i
+                  class="fa-solid fa-arrow-right-from-bracket"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="lower">
+          <ul>
+            <li><a href="./productlist.html" class="block rounded py-2 pl-3 pr-4 text-grey-700 hover:bg-red-100 md:p-0 md:hover:bg-transparent md:hover:text-red-700 Eveningbags">Evening bags</a></li>
+            <li><a href="./productlist.html" class="block rounded py-2 pl-3 pr-4 text-grey-700 hover:bg-red-100 md:p-0 md:hover:bg-transparent md:hover:text-red-700 Shoulderbags">Shoulder bag</a></li>
+            <li><a href="./productlist.html" class="block rounded py-2 pl-3 pr-4 text-grey-700 hover:bg-red-100 md:p-0 md:hover:bg-transparent md:hover:text-red-700 Backpack">Backpack</a></li>
+            <li><a href="./productlist.html" class="block rounded py-2 pl-3 pr-4 text-grey-700 hover:bg-red-100 md:p-0 md:hover:bg-transparent md:hover:text-red-700 Handbags">Handbag</a></li>
+            <li><a href="./productlist.html" class="block rounded py-2 pl-3 pr-4 text-grey-700 hover:bg-red-100 md:p-0 md:hover:bg-transparent md:hover:text-red-700 Postmanbag">Postman bag</a></li>
+            <li><a href="./productlist.html" class="block rounded py-2 pl-3 pr-4 text-grey-700 hover:bg-red-100 md:p-0 md:hover:bg-transparent md:hover:text-red-700 Beltbags">Belt bags</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+    </header>
+    <!-- main page -->
+    <div class="container">
+      <div class="homeToPage">
+        <p><a href="./index.html" class="block rounded text-grey-700 hover:bg-red-100 md:p-0 md:hover:bg-transparent md:hover:text-red-700">Home</a></p>
+        <img src="./res/img/icons/chevron-right.svg" alt="" />
+        <span class="categoryspan">Shoulder Bags</span>
+      </div>
+      <div class="firstsection">
+        <div class="bags categoryspan">Shoulder bags</div>
+        <div class="flexver">
+          <p class="prodListCount">320 result</p>
+
+
+          <select class="featurebtn" name="" id="filters">
+            <option value="">Featured</option>
+            <option class="priceBtn" value="">Price</option>
+            <option class="soldbtn" value="">Sold</option>
+          </select>
+
+
+        </div>
+      </div>
+      <div class="mainPage">
+        
+        <div class="rightside row productlist">
+          <!-- flex ver her carda -->
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+        <div class="upperFooter container">
+          <div class="logo"> <a href="./index.html" class="logo">Snobella</a></div>
+        </div>
+        <hr />
+        <div class="lowerFooter container">
+          <div class="left">
+            <p>
+              The wise man therefore always holds selectionThe wise man
+              therefore always rejects pleasures to secure other greater
+            </p>
+            <div class="buttons mail">
+              <img
+                src="./res/img/icons/email (3) 1.svg"
+                alt=""
+              />Snobella@gmail.com
+            </div>
+            <div class="buttons phone">
+              <img src="./res/img/icons/phone-call (3) 1.svg" alt="" />+748 383
+              23 14
+            </div>
+            <div class="buttons message">
+              <img src="./res/img/icons/send 1.svg" alt="" />Send message
+            </div>
+          </div>
+          <div class="right">
+            <ul>
+              <il class="head">Shop</il>
+              <il>Shoulder Bag</il>
+              <il>Backpack</il>
+              <il>Tote bag</il>
+              <il>Hand bag</il>
+              <il>Evening bags</il>
+              <il>Purse</il>
+            </ul>
+            <ul>
+              <il class="head">Company</il>
+              <il>About us</il>
+              <il>Contact</il>
+              <il>Terms of Use</il>
+              <il>Customer service</il>
+            </ul>
+            <ul>
+              <il class="head">Help</il>
+              <il>FAQ</il>
+              <il>Delivery</il>
+              <il>Cancellation of the order</il>
+              <il>Don't go back</il>
+            </ul>
+          </div>
+        </div>
+    </div>
+     <div class="credits">
+      <div class="container">
+        <div class="text">© 2020. All rights reserved.</div>
+        <div class="socials">
+          <div class="iconn me-5">
+            <img src="/res/img/icons/instagram (1).svg" alt="" />
+          </div>
+          <div class="iconn me-5">
+            <img src="/res/img/icons/facebook (6).svg" alt="" />
+          </div>
+          <div class="iconn me-5">
+            <img src="/res/img/icons/whatsapp.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./script/logout.js"></script>
+
+    <script src="./script/productlist.js"></script>
+  </body>
+</html>
